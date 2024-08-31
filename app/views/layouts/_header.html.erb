@@ -1,5 +1,5 @@
-<header class="bg-white shadow-sm">
-  <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+<header class="bg-white shadow-md" data-controller="hello header">
+  <nav class="container mx-auto px-3 py-3 flex items-center justify-between">
     <%= link_to root_path do %>
       <div class="flex items-center">
         <img class="w-8" src="https://a0.muscache.com/airbnb/static/icons/android-icon-192x192-c0465f9f0380893768972a31a614b670.png" alt="Airbnb logo"/>
@@ -16,8 +16,43 @@
         </li>
       </ul>
     </div>
-    <button class="bg-[#ff385c] text-white px-4 py-2 rounded-full hover:bg-pink-600 transition-colors">
-      Sign In
-    </button>
+    <div class="flex items-center justify-between">
+      <button class="text-gray-500">Airbnb your home</button>
+      <button class="mx-5">
+        <i class="fa-solid fa-globe"></i>
+      </button>
+      <div class="relative">
+        <button data-header-target="openUserMenu" class="text-gray-500 px-4 py-2 rounded-full border-2 transition-colors flex items-center justify-center space-x-2 hover:shadow-md">
+          <i class="fa-solid fa-bars size-4"></i>
+          <i class="fa-solid fa-circle-user size-7"></i>
+        </button>
+
+        <div 
+          class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+          id="menu-dropdown-items" 
+          role="menu"
+          aria-orientation="vertical" 
+          aria-labelledby="menu-button" 
+          tabindex="-1"
+          data-transition-enter="transition ease-out duration-100"
+          data-transition-enter-start="transform opacity-0 scale-95"
+          data-transition-enter-end="transform opacity-100 scale-100"
+          data-transition-leave="transition ease-in duration-75"
+          data-transition-leave-start="transform opacity-100 scale-100"
+          data-transition-leave-end="transform opacity-0 scale-95"
+          >
+          <div class="py-1" role="none">
+            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Sign up</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Login</a>
+          </div>
+          <div class="py-1" role="none">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">Gift cards</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Airbnb your home</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Help Center</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
 </header>

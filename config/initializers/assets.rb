@@ -5,6 +5,9 @@ Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.precompile += %w( tailwind.css )
 Rails.application.config.assets.precompile += %w( controllers/hello_controller.js )
 Rails.application.config.assets.precompile += %w( controllers/index.js )
+Rails.application.config.assets.precompile += %w( @fortawesome--fontawesome-free.js )
+Rails.application.config.assets.precompile += %w( controllers/header_controller.js )
+Rails.application.config.assets.precompile += %w( *.js *.css )
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
