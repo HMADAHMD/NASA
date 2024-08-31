@@ -1,0 +1,23 @@
+<header class="bg-white shadow-sm">
+  <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <%= link_to root_path do %>
+      <div class="flex items-center">
+        <img class="w-8" src="https://a0.muscache.com/airbnb/static/icons/android-icon-192x192-c0465f9f0380893768972a31a614b670.png" alt="Airbnb logo"/>
+        <h1 class="text-2xl text-red-500 px-1 font-semibold">airbnb</h1>
+      </div>
+    <% end %>
+    <div class="hidden md:block">
+      <ul class="flex items-center gap-6">
+        <li>
+          <a class="text-gray-600 hover:text-gray-900 transition-colors" href="#">Stays</a>
+        </li>
+        <li>
+          <a class="text-gray-600 hover:text-gray-900 transition-colors" href="#">Experiences</a>
+        </li>
+      </ul>
+    </div>
+    <button class="bg-[#ff385c] text-white px-4 py-2 rounded-full hover:bg-pink-600 transition-colors">
+      Sign In
+    </button>
+  </nav>
+</header>

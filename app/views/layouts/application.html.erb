@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AirbnbClone</title>
+    <title>Airbnb</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap');
+    </style>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag asset_path="icon.png" %>
   </head>
 
   <body>
     <%= yield %>
+    <%= render "layouts/header"%>
   </body>
 </html>
