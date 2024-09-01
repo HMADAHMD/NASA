@@ -29,7 +29,7 @@
 
         <div 
           class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
-          id="menu-dropdown-items" 
+          id="menu-dropdown-items"
           role="menu"
           aria-orientation="vertical" 
           aria-labelledby="menu-button" 
@@ -43,16 +43,18 @@
           >
           <div class="py-1" role="none">
             <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Sign up</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Login</a>
+            <a href="#" data-header-target="userAuthLink" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1">Sign up</a>
+            <a href="#" data-header-target="userAuthLink" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1">Login</a>
           </div>
           <div class="py-1" role="none">
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">Gift cards</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Airbnb your home</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Help Center</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="menu-item-2">Gift cards</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="menu-item-3">Airbnb your home</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="menu-item-3">Help Center</a>
           </div>
         </div>
       </div>
     </div>
   </nav>
 </header>
+
+<%= render 'shared/modal' %>
