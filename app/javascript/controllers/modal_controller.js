@@ -14,8 +14,15 @@ export default class extends Controller {
 
   closeModal(event) {
     const modalPanelClicked = document.getElementById("modal-panel").contains(event.target);
+    const modalPanelClose = document.getElementById("closeModal").contains(event.target);
 
     if (!modalPanelClicked && event.target.id !== 'modal-trigger') {
+      leave(document.getElementById("modal-wrapper"));
+      leave(document.getElementById("modal-backdrop"));
+      leave(document.getElementById("modal-panel"));
+    }
+
+    if(modalPanelClose){
       leave(document.getElementById("modal-wrapper"));
       leave(document.getElementById("modal-backdrop"));
       leave(document.getElementById("modal-panel"));
