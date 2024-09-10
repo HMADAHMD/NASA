@@ -1,19 +1,10 @@
 module Api
-  class UserByEmailsController < ApplicationController
+   class UserByEmailsController < ApplicationController
     def show
       user = User.find_by!(email: params[:email])
-
-      respond_to do |format|
-        format.json do
-          render json: user.to_json, status: :ok
-        end
-      end
+      render json: user.to_json, status: :ok
     rescue ActiveRecord::RecordNotFound => e
-      respond_to do |format|
-        format.json do
-          render json: { error: e.message }, status: :not_found
-        end
-      end
+      render json: { error: e.message }, status: :not_found
     end
   end
 end

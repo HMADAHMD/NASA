@@ -15,7 +15,18 @@ export default class extends Controller {
     if (!validEmail || email.length === 0) {
       console.log("email is not valid");
     } else {
-      console.log("email is valid");
+      fetch(`/api/user_by_emails/:${email}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
+        },
+      })
+      .then(response => {
+          Turbo.visit('users/sign_in')
+        }).catch((response) => {
+          Turbo.visit('users/sign_up')
+        });
     }
   }
 }
