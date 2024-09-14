@@ -23,9 +23,9 @@ export default class extends Controller {
         },
       })
       .then(response => {
-          Turbo.visit('users/sign_in')
-        }).catch((response) => {
           Turbo.visit('users/sign_up')
+        }).catch((response) => {
+          Turbo.visit('users/sign_in')
         });
     }
   }
