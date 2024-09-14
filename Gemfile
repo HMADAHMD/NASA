@@ -24,6 +24,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "factory_bot_rails"
   gem "database_cleaner-active_record"
+  gem "hotwire-livereload"
 end
 
 group :development do
