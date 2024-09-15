@@ -50,6 +50,7 @@
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="menu-item-2">Gift cards</a>
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="menu-item-3">Airbnb your home</a>
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="menu-item-3">Help Center</a>
+            <%= button_to "Logout", destroy_user_session_path, method: :delete, class:"block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
           </div>
         </div>
       </div>
