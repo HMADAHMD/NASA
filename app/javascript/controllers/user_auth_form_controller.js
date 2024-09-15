@@ -15,7 +15,7 @@ export default class extends Controller {
     if (!validEmail || email.length === 0) {
       console.log("email is not valid");
     } else {
-      fetch(`/api/user_by_emails/:${email}`, {
+      fetch(`/api/user_by_emails/${email}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -23,9 +23,14 @@ export default class extends Controller {
         },
       })
       .then(response => {
+        if (response.ok) {
+          Turbo.visit('users/sign_in');
+        } else {
+          Turbo.visit('users/sign_up');
+        }
+        }).catch((error) => {
+          console.error("Fetch error:", error);
           Turbo.visit('users/sign_up')
-        }).catch((response) => {
-          Turbo.visit('users/sign_in')
         });
     }
   }
