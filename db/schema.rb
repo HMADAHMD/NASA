@@ -22,6 +22,13 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_15_110039) do
     t.string "state"
     t.string "country"
     t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "bedrooms"
+    t.integer "bathrooms"
+    t.integer "square_feet"
+    t.integer "price_cents"
+    t.string "price_currency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
