@@ -30,6 +30,7 @@ end
 group :development do
   gem "web-console"
   gem "solargraph"
+  gem 'annotate'
 end
 
 group :test do
