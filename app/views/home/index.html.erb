@@ -1,76 +1,20 @@
 <div class="overflow-x-hidden">
   <div class="grid h-full w-screen place-items-center gap-x-4 gap-y-6 p-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+    <%# single grid %>
+    <% @properties.each do |property|%>
+      <div class="space-y-2">
+        <div class="overflow-hidden rounded-xl">
+          <img class="rounded-3xl transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://a0.muscache.com/im/pictures/miso/Hosting-912305060013575560/original/eb4120bb-e281-41eb-bef5-7dac96eb90f2.jpeg?im_w=720" alt="" />
+        </div>
+        <div class="bg-gray-50 px-2">
+          <div class="flex justify-between">
+            <h1 class="text-md font-medium text-gray-900"><%= property.name%>, <%= property.city%></h1>
+            <h1 class="text-md font-medium text-gray-600">4.9</h1>
+          </div>
+          <h1 class="text-sm text-gray-500"><%= property.bedrooms%> Beds</h1>
+          <h1 class="text-sm text-gray-500">$<%= (property.price_cents)/100%> per week</h1>
+        </div>
       </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-      </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-      </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-      </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-      </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-      </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-      </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
-    <div class="space-y-2">
-      <div class="overflow-hidden rounded-md">
-        <img class="transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fG5hdHVyZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
-      </div>
-      <div>
-        <h1 class="text-xl font-semibold text-gray-900">Lorem Ipsum</h1>
-        <h1 class="text-lg text-gray-500">Lorem ipsum dolor sit amet.</h1>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
