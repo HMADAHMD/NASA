@@ -1,3 +1,6 @@
 class HomeController < ApplicationController
-  def index; end
+  def index
+    # @properties = Property.all
+    # render json: @properties
+  end
 end
