@@ -4,4 +4,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+
+  namespace :api do
+    resources :users, only: :show
+    get "/user_by_emails/:email", to: "user_by_emails#show", as: :user_by_emails, constraints: { email: /[^\/]+/ }
+  end
 end

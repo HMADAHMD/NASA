@@ -1,0 +1,20 @@
+<div class="overflow-x-hidden">
+  <div class="grid h-full w-screen place-items-center gap-x-4 gap-y-6 p-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <%# single grid %>
+    <% @properties.each do |property|%>
+      <div class="space-y-2">
+        <div class="overflow-hidden rounded-xl">
+          <img class="rounded-3xl transform shadow-md duration-300 hover:scale-110 hover:opacity-95" src="https://a0.muscache.com/im/pictures/miso/Hosting-912305060013575560/original/eb4120bb-e281-41eb-bef5-7dac96eb90f2.jpeg?im_w=720" alt="" />
+        </div>
+        <div class="bg-gray-50 px-2">
+          <div class="flex justify-between">
+            <h1 class="text-md font-medium text-gray-900"><%= property.name%>, <%= property.city%></h1>
+            <h1 class="text-md font-medium text-gray-600">4.9</h1>
+          </div>
+          <h1 class="text-sm text-gray-500"><%= property.bedrooms%> Beds</h1>
+          <h1 class="text-sm text-gray-500">$<%= (property.price_cents)/100%> per week</h1>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

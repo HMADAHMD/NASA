@@ -1,0 +1,151 @@
+properties:
+  - name: Cozy Downtown Loft
+    headline: Modern Living in the Heart of the City
+    description: This stylish loft offers an open floor plan with high ceilings and exposed brick walls. Perfect for young professionals or couples.
+    city: New York
+    state: NY
+    country: USA
+    address: 777 Brockton Avenue, Abington MA 2351
+    latitude: 40.7128
+    longitude: -74.0060
+    bedrooms: 1
+    bathrooms: 1
+    square_feet: 800
+    price_cents: 750000
+    price_currency: 'USD'
+
+  - name: Suburban Family Home
+    headline: Spacious Living in a Quiet Neighborhood
+    description: This beautiful 4-bedroom home features a large backyard, modern kitchen, and a two-car garage. Ideal for growing families.
+    city: Austin
+    state: TX
+    country: USA
+    address: 30 Memorial Drive, Avon MA 2322
+    latitude: 30.2672
+    longitude: -97.7431
+    bedrooms: 4
+    bathrooms: 3
+    square_feet: 2500
+    price_cents: 550000
+    price_currency: 'USD'
+
+  - name: Beachfront Condo
+    headline: Wake Up to Ocean Views
+    description: Luxurious 2-bedroom condo with panoramic ocean views. Enjoy resort-style amenities and direct beach access.
+    city: Miami Beach
+    state: FL
+    country: USA
+    address: 250 Hartford Avenue, Bellingham MA 2019
+    latitude: 25.7617
+    longitude: -80.1918
+    bedrooms: 2
+    bathrooms: 2
+    square_feet: 1200
+    price_cents: 1200000
+    price_currency: 'USD'
+
+
+  - name: Mountain Retreat
+    headline: Escape to Nature in this Cozy Cabin
+    description: Charming log cabin surrounded by pine trees. Features a stone fireplace and large deck with mountain views.
+    city: Aspen
+    state: CO
+    country: USA
+    address: 700 Oak Street, Brockton MA 2301
+    latitude: 39.1911
+    longitude: -106.8175
+    bedrooms: 3
+    bathrooms: 2
+    square_feet: 1800
+    price_cents: 950000
+    price_currency: 'USD'
+
+  - name: Urban Penthouse
+    headline: Luxury Living with Skyline Views
+    description: Stunning penthouse apartment with floor-to-ceiling windows, gourmet kitchen, and private rooftop terrace.
+    city: Chicago
+    state: IL
+    country: USA
+    address: 66-4 Parkhurst Rd, Chelmsford MA 1824
+    latitude: 41.8781
+    longitude: -87.6298
+    bedrooms: 3
+    bathrooms: 3
+    square_feet: 3000
+    price_cents: 2500000
+    price_currency: 'USD'
+
+  - name: Historic Brownstone
+    headline: Classic Charm Meets Modern Comfort
+    description: Beautifully restored 19th-century brownstone with original details and updated amenities. Features a private garden.
+    city: Boston
+    state: MA
+    country: USA
+    address: 591 Memorial Dr, Chicopee MA 1020
+    latitude: 42.3601
+    longitude: -71.0589
+    bedrooms: 4
+    bathrooms: 3
+    square_feet: 3500
+    price_cents: 2800000
+    price_currency: 'USD'
+
+  - name: Silicon Valley Smart Home
+    headline: Tech-Savvy Living in the Bay Area
+    description: Cutting-edge smart home with integrated home automation system. Open concept design perfect for entertaining.
+    city: Palo Alto
+    state: CA
+    country: USA
+    address: 55 Brooksby Village Way, Danvers MA 1923
+    latitude: 37.4419
+    longitude: -122.1430
+    bedrooms: 4
+    bathrooms: 3
+    square_feet: 2800
+    price_cents: 3500000
+    price_currency: 'USD'
+
+  - name: French Quarter Gem
+    headline: Live in the Heart of New Orleans History
+    description: Charming Creole cottage with wrought-iron balconies and a secluded courtyard. Steps away from iconic jazz clubs and restaurants.
+    city: New Orleans
+    state: LA
+    country: USA
+    address: 137 Teaticket Hwy, East Falmouth MA 2536
+    latitude: 29.9511
+    longitude: -90.0715
+    bedrooms: 2
+    bathrooms: 2
+    square_feet: 1500
+    price_cents: 850000
+    price_currency: 'USD'
+
+  - name: Pacific Northwest Treehouse
+    headline: Unique Living Experience in Nature
+    description: Modern treehouse design with sustainable features. Surrounded by lush forest with easy access to hiking trails.
+    city: Portland
+    state: OR
+    country: USA
+    address: 42 Fairhaven Commons Way, Fairhaven MA 2719
+    latitude: 45.5155
+    longitude: -122.6789
+    bedrooms: 2
+    bathrooms: 1
+    square_feet: 1000
+    price_cents: 675000
+    price_currency: 'USD'
+
+  - name: Desert Oasis Villa
+    headline: Luxury Resort Living in the Southwest
+    description: Expansive villa with infinity pool and breathtaking desert views. Features a home theater and private tennis court.
+    city: Scottsdale
+    state: AZ
+    country: USA
+    address: 374 William S Canning Blvd, Fall River MA 2721
+    latitude: 33.4942
+    longitude: -111.9261
+    bedrooms: 5
+    bathrooms: 5
+    square_feet: 5000
+    price_cents: 4500000
+    price_currency: 'USD'

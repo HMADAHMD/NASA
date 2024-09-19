@@ -1,29 +1,72 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<section class="bg-gray-50 dark:bg-gray-900" data-controller="password-toggle">
+  <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <%= link_to root_path do %>
+      <div class="flex items-center py-4">
+        <img class="w-10" src="https://a0.muscache.com/airbnb/static/icons/android-icon-192x192-c0465f9f0380893768972a31a614b670.png" alt="Airbnb logo"/>
+        <h1 class="text-3xl text-red-500 px-1 font-semibold">airbnb</h1>
+      </div>
+    <% end %>
+      <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+              <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                  Create your account
+              </h1>
+              <div class="space-y-4 md:space-y-6">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                  <%= render "devise/shared/error_messages", resource: resource %>
+                    <div class= "my-5">
+                        <%= f.label :email, class: "block -mb-3 text-sm font-medium text-gray-900 dark:text-white"%><br />
+                        <%= f.email_field :email, autofocus: true,
+                        autocomplete: "email",
+                        placeholder: "foo@bar.com",
+                        class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-600 focus:border-red-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" %>
+                    </div>
+                    <div class= "my-5">
+                        <%= f.label :password, class: "block mb-3 text-sm font-medium text-gray-900 dark:text-white"%>
+                        <%= f.password_field :password, 
+                        autocomplete: "new-password",
+                        data: { password_toggle_target: "password" },
+                         placeholder: "enter your password",
+                        class:"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-600 focus:border-red-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"%>
+                    </div>
+                    <div class= "mt-5 relative">
+                        <%= f.label :password_confirmation, class:"block -mb-3 text-sm font-medium text-gray-900 dark:text-white" %><br />
+                        <%= f.password_field :password_confirmation,
+                        autocomplete: "new-password",
+                        data: { password_toggle_target: "password" },
+                        placeholder: "confirm password",
+                        class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-600 focus:border-red-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" %>
+                    </div>
+                    <div class="flex items-center justify-between mt-2">
+                      <div class="flex items-start">
+                      </div>
+                        <button type="button"
+                          data-password-toggle-target="toggleButton" 
+                          data-action="password-toggle#toggle" 
+                          class="text-xs text-gray-400 hover:text-gray-700">
+                          <span data-password-toggle-target="eyeIcon">Show password</span>
+                        </button>
+                    </div>
+                    <div class="flex items-start my-5">
+                      <div class="flex items-center h-5">
+                        <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-red-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-red-600 dark:ring-offset-gray-800" required="">
+                      </div>
+                      <div class="ml-3 text-sm">
+                        <label for="terms" class="font-light text-gray-500 dark:text-gray-300">I accept the <a class="font-medium text-red-600 hover:underline dark:text-grey-500" href="#">Terms and Conditions</a></label>
+                      </div>
+                    </div>
+                    <button class="my-5 w-full text-white bg-[#dc1756] hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                      
+                      <%= f.submit "Sign up" %>
+                    </button>
+                    <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                        Already have an account? 
+                        <%= link_to user_session_path, class:"font-medium text-red-600 hover:underline dark:text-red-500" do%>
+                          Login here
+                        <% end %>
+                    </p>
+                <% end %>
+              </div>
+          </div>
+      </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
